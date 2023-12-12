@@ -1,5 +1,5 @@
 --[[
-    @Modified by: Cencyte
+    @Modified by: Cencyte 
     @Original Author(s): Zaibuyidao, Lokasenna
     @Date Created: 11-17-23
     @Description: Selects Note Under Mouse Cursor
@@ -214,9 +214,6 @@ function main(div, take)
   end)
   switch = true
 elseif div >= 1 and switch == true then
-  --events = clone(events)
-  --print("events cloned")
-  --After 
 end
 
     local skipEvents = {}
@@ -310,7 +307,7 @@ end
       elseif key == "y" then
         return mouseMsg[key].y
       end
-  end, --Will have to use this differently, and assign another table to the return value.
+  end, 
   __newIndex = function(mouseMsg, key, value)
   if key == "intercept" then
     reaper.JS_WindowMessage_Intercept(Hwnd_At_Cursor, value, true)
@@ -352,7 +349,6 @@ for take, _ in pairs(getAllTakes()) do
     local time2 = mouseMsg['0x0202'].time
     if p_time2 then print("p_time2 is: " .. p_time2) end
     if mouseMsg['0x0202'].OK and time2 ~= 0.0 and time2 ~= p_time2 and reaper.GetExtState("CC Script", "Pressed") then
-      --print("1x RELEASE ACTION HERE")
       p_time2 = time2
       reaper.SetExtState("CC Script", "Released", "true", true)
       reaper.SetExtState("CC Script", "Pressed", "false", true)
@@ -371,15 +367,7 @@ for take, _ in pairs(getAllTakes()) do
           local del_div = div - (div_prev or 0)
           local int_y = dely //  cursor_Int
           next_Int = ((div + 1) * cursor_Int)
-          --[[
-          print("dy_prev is: " .. (dy_prev or 0))
-          print("dely is: " .. dely)
-          print("dy is " .. dy)
-          print("div is " .. div)
-          print("next_Int is " .. next_Int)
-          ]]
           main(div, take)
-          -- if div == 1 then print("[FIRST]") else print("[SPLIT]") end
         end
         div_prev = div
         dy_prev = dy
@@ -407,7 +395,6 @@ end
 local time = mouseMsg['0x0201'].time 
 if mouseMsg['0x0201'].OK and time ~= p_time then
       if reaper.GetExtState("CC Script", "Pressed") == "" then
-        --print("1x PRESS ACTION HERE")
         reaper.SetExtState("CC Script", "Pressed", "true", true)
         p_time = time
       end
