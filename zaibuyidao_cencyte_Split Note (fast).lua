@@ -1,6 +1,10 @@
 --[[
     @Modified by: Cencyte 
+<<<<<<< HEAD
     @Original Author(s): Zaibuyidao
+=======
+    @Original Author(s): Zaibuyidao, Lokasenna
+>>>>>>> e90ff4645aabafd2fe1393793cba228897cf3ccd
     @Date Created: 11-17-23
     @Description: Selects Note Under Mouse Cursor
     @Version: 1.0
