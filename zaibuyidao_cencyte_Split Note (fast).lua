@@ -1,11 +1,10 @@
 --[[
     @Modified by: Cencyte 
-    @Original Author(s): Zaibuyidao, Lokasenna
+    @Original Author(s): Zaibuyidao
     @Date Created: 11-17-23
     @Description: Selects Note Under Mouse Cursor
     @Version: 1.0
     @License: MIT
-    @Note: '<>' syntax indicates an API-specific function
 ]]
 
 EVENT_NOTE_START = 9
